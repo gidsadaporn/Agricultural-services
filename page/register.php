@@ -11,6 +11,9 @@ $title = 'register'; include("top.php");
 
 
 <style>
+#all-panel{
+    box-shadow: 5px 4px 8px 5px rgba(0, 0, 0, 0), 0 0 60px 0 rgba(0, 0, 0, 0.19);      
+}
 .col-centered{
     text-align: center;
 vertical-align: middle;  
@@ -28,9 +31,9 @@ vertical-align: middle;
 
 <div class="col-md-4 col-md-offset-4">
 
-<div class="login-panel panel panel-default">
+<div id="all-panel" class="login-panel panel panel-default">
         
-    <div class="panel-heading">
+    <div  class="panel-heading">
         <h3 class="panel-title">สมัครสมาชิก</h3>
     </div>
     <div class="panel-body">

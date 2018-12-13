@@ -16,6 +16,7 @@ require('check_user.php');
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet">
 
     <title><?php echo $title; ?></title>
 
@@ -39,22 +40,33 @@ require('check_user.php');
     <![endif]-->
 
     <style>
-        body {background-color: powderblue;}
+        body {
+            
+            font-family: 'K2D', sans-serif;
+        }
+        .bg {
+  
+            background-image: url("BG13.jpg");
+            height: 100%; 
+            width:100%;
+            background-size: cover;
+}
     </style>
 
 
 </head>
 
 
-<body>
+<body class="bg">
 
-    <div id="wrapper">
+    <div  id="wrapper">
+
         <div class="row" style="padding:10px"> 
             <div class="col-lg-12" align="right">
                 <?php
                     if(isset($_SESSION['name']))
                     {
-                        echo "WELCOME: ".$_SESSION['name'];
+                        echo "WELCOME &nbsp; : &nbsp; &nbsp;".$_SESSION['name'];
                     }
                      
                 ?>

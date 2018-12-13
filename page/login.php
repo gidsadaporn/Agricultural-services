@@ -9,9 +9,16 @@ if(isset($_SESSION['user_id']))
 $title = 'login'; include("top.php");
 ?>
 
+<style>
+#all-panel{
+    box-shadow: 5px 4px 8px 5px rgba(0, 0, 0, 0), 0 0 60px 0 rgba(0, 0, 0, 0.19);      
+}
+
+</style>
+
 <div class="col-md-4 col-md-offset-4">
-<div class="login-panel panel panel-default">
-    <div class="panel-heading">
+<div id="all-panel" class="login-panel panel panel-default">
+    <div class="panel-heading" style="background-color: #D9EDF7" style="font-color: #7EA5B9" >
         <h3 class="panel-title">เข้าสู่ระบบ</h3>
     </div>
     <div class="panel-body">

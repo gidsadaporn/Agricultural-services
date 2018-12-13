@@ -3,6 +3,9 @@ $title = 'ข้อมูลผู้ใช้บริการ'; include("top.
 ?>
 
 <style>
+#all-panel{
+    box-shadow: 5px 4px 8px 5px rgba(0, 0, 0, 0), 0 0 60px 0 rgba(0, 0, 0, 0.19);      
+}
 .col-centered{
     float: none;
     margin: 0 auto;
@@ -40,7 +43,7 @@ $cust = $stmt->fetchAll();
     foreach($cust as $c){
         ?> 
 
-    <div class="panel panel-info">
+    <div id="all-panel" class="panel panel-info">
         <div class="panel-heading">
             <span class="text">
                     <?= $c['customer_name']?>
@@ -79,27 +82,27 @@ $cust = $stmt->fetchAll();
                 <div class="col-lg-8">
                     <div class="row">
                         <div class="col-lg-6">
-                            เบอร์โทรศัพท์ : <?= $c['customer_phone']?>
+                            เบอร์โทรศัพท์ &nbsp;  : &nbsp; &nbsp;<?= $c['customer_phone']?>
                         </div>
                         <div class="col-lg-6">
-                            พื้นที่ : <?= cal_area($c['area'])?>
+                            พื้นที่ &nbsp;  : &nbsp; &nbsp;<?= cal_area($c['area'])?>
                         </div>
                         <div class="col-lg-6">
-                            ที่อยู่ : <?= $c['customer_address']?>
+                            ที่อยู่  &nbsp;  : &nbsp; &nbsp;<?= $c['customer_address']?>
                         </div>
                         <div class="col-lg-6">
-                            ค่าบริการ : <?= $c['price']?>
+                            ค่าบริการ &nbsp;  : &nbsp; &nbsp;<?= $c['price']?>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    สถานะการชำระเงิน : <?= get_payment($c['pay_type'],$c['pay_act'])?>
+                    สถานะการชำระเงิน &nbsp;  : &nbsp; &nbsp;<?= get_payment($c['pay_type'],$c['pay_act'])?>
                 </div>
                 
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                        หมายเหตุ : <?= $c['detail']?>
+                        หมายเหตุ &nbsp;  : &nbsp; &nbsp;<?= $c['detail']?>
                     </div>
                 </div>
         </div>

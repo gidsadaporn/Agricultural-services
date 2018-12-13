@@ -3,6 +3,9 @@ $title = 'บันทึกข้อมูลผู้ใช้บริกา�
 ?>
 
 <style>
+#all-panel{
+    box-shadow: 5px 4px 8px 5px rgba(0, 0, 0, 0), 0 0 60px 0 rgba(0, 0, 0, 0.19);      
+}
 .col-centered{
     float: none;
     margin: 0 auto;
@@ -15,6 +18,7 @@ $title = 'บันทึกข้อมูลผู้ใช้บริกา�
 .text{
     font-size: 20px;
 }
+
 
 </style>
 
@@ -49,17 +53,17 @@ if($data_2 == null){
 ?>
 
 <div class="row" style="padding-top:20px" >
-    <div class="col-lg-6 col-centered " >
+    <div  class="col-lg-6 col-centered " >
 
-        <div class="panel panel-info">
+        <div id="all-panel" class="panel panel-info">
             <div class="panel-heading">
                 เพิ่มการให้บริการ
             </div>
-        <div class="panel-body">
+        <div  class="panel-body">
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <form role="form" action = "./new_employ.php" method="POST">
+            <div  class="row">
+                <div  class="col-lg-12">
+                    <form  role="form" action = "./new_employ.php" method="POST">
                         <div class="form-group ">
                             <label class="col-lg-2 ">ชื่อ</label>
                             <label class="col-lg-10">
@@ -85,13 +89,13 @@ if($data_2 == null){
                         <div class="form-group">
                             <label  class="col-lg-3" >สถานะการชำระ</label>
                             <label class="radio-inline">
-                                <input type="radio" name="pay_act" value="2" checked>จ่ายแล้ว
+                                <input type="radio" name="pay_act" value="2" checked>จ่ายแล้ว &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                             </label>
                             <label class="radio-inline">
-                                <input type="radio" name="pay_act"value="1">ค้างชำระ
-                            </label>
+                                <input type="radio" name="pay_act"value="1">ค้างชำระ 
+                            </label></br>
                             <label class="radio-inline">
-                                <input type="radio" name="pay_type"value="1" checked>จ่ายสด
+                                <input type="radio" name="pay_type"value="1" checked>จ่ายสด &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                             </label>
                             <label class="radio-inline">
                                 <input type="radio" name="pay_type"value="2">ผ่อนจ่าย
@@ -102,19 +106,19 @@ if($data_2 == null){
                         <div class="form-group ">
                             <label class="col-lg-3 ">ค่าบริการต่อไร่ </label>
                             <label class="col-lg-9">
-                                <input class="form-control" id="pricex" type="number" min ="0" value = "0" onchange="change_price()">
+                                <input class="form-control" id="pricex" type="number" min ="0"  onchange="change_price()">
                             </label>
                         </div>
                         <div class="form-group ">
-                            <label class="col-lg-3 ">พื้นที่(ตารางวา) </label>
+                            <label class="col-lg-3 ">พื้นที่ ( ตารางวา ) </label>
                             <label class="col-lg-9">
-                                <input class="form-control" name="area"id="area" type="number" min ="0" value = "0" onchange="change_price()">
+                                <input class="form-control" name="area"id="area" type="number" min ="0" onchange="change_price()">
                             </label>
                         </div>
                         <div class="form-group ">
                             <label class="col-lg-3 ">ค่าบริการ </label>
                             <label class="col-lg-9">
-                                <input class="form-control" name="price"id="price" type="number" min ="0" value = "0" step="0.01">
+                                <input class="form-control" name="price"id="price" type="number" min ="0"  step="0.01">
                             </label>
                         </div>
 
@@ -126,7 +130,7 @@ if($data_2 == null){
                          </div>
 
                          <div class="form-group">
-                         <button type="submit" class="col-lg-12 btn btn-success">บันทึก</button>
+                         <button type="submit" class="col-lg-12 btn btn-success" style="margin-top: 20px;">บันทึก</button>
                                 
                          </div>
 

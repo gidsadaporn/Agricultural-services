@@ -3,6 +3,9 @@ $title = 'ข้อมูลผู้ประกอบการ'; include("top.
 ?>
 
 <style>
+#all-panel{
+    box-shadow: 5px 4px 8px 5px rgba(0, 0, 0, 0), 0 0 60px 0 rgba(0, 0, 0, 0.19);      
+}
 .col-centered{
     float: none;
     margin: 0 auto;
@@ -48,22 +51,22 @@ if($data_2 == null){
 // exit(1);
 ?>
 
-<div class="row" style="padding-top:20px" >
-    <div class="col-lg-6 col-centered " >
+<div  class="row" style="padding-top:50px">
+    <div  class="col-lg-6 col-centered " >
 
-        <div class="panel panel-info">
-            <div class="panel-heading">
+        <div id="all-panel" class="panel panel-info">
+            <div  class="panel-heading">
                 สรุปข้อมูลทั้งหมด
             </div>
             <div class="panel-body">
                 <div class="col-lg-12">
-                    ชื่อผู้ประกอบการ : <?= $_SESSION['name']?>    
+                    ชื่อผู้ประกอบการ &nbsp; &nbsp; &nbsp; &nbsp;  : &nbsp; &nbsp; <?= $_SESSION['name']?>    
                 </div>
                 <div class="col-lg-12">
-                    จำนวนการใช้บริการ : <?= $data_1['AMOUNT']+$data_2['AMOUNT']?> รายการ   
+                    จำนวนการใช้บริการ &nbsp; &nbsp;  : &nbsp; &nbsp; <?= $data_1['AMOUNT']+$data_2['AMOUNT']?> รายการ   
                 </div>
                 <div class="col-lg-12">
-                    รายได้จากค่าบริการ : <?= $data_1['TOTAL']+$data_2['TOTAL']?> บาท  
+                    รายได้จากค่าบริการ  &nbsp; &nbsp;  : &nbsp; &nbsp; <?= $data_1['TOTAL']+$data_2['TOTAL']?> บาท  
                 </div>
             </div>
             
@@ -73,29 +76,29 @@ if($data_2 == null){
 
     <div class="col-lg-6 col-centered " >
 
-<div class="panel panel-info">
+<div id="all-panel" class="panel panel-info" >
 
     <div class="panel-body">
         
         <div class="col-lg-12">
-            จำนวนบริการที่ชำระแล้ว : <?= $data_2['AMOUNT']?> รายการ   
+            จำนวนบริการที่ชำระแล้ว &nbsp; &nbsp;  : &nbsp; &nbsp; <?= $data_2['AMOUNT']?> รายการ   
         </div>
         <div class="col-lg-12">
-            รวมเป็นเงิน : <?=$data_2['TOTAL']?> บาท  
+            รวมเป็นเงิน &nbsp; &nbsp;  : &nbsp; &nbsp; <?=$data_2['TOTAL']?> บาท  
         </div>
     </div>
     
 </div>
 
-<div class="panel panel-info">
+<div id="all-panel" class="panel panel-info">
 
 <div class="panel-body">
     
     <div class="col-lg-12">
-        จำนวนบริการที่ค้างชำระ : <?= $data_1['AMOUNT']?> รายการ   
+        จำนวนบริการที่ค้างชำระ &nbsp; &nbsp;  : &nbsp; &nbsp; <?= $data_1['AMOUNT']?> รายการ   
     </div>
     <div class="col-lg-12">
-        รวมเป็นเงิน : <?=$data_1['TOTAL']?> บาท  
+        รวมเป็นเงิน &nbsp; &nbsp;  : &nbsp; &nbsp;<?=$data_1['TOTAL']?> บาท  
     </div>
 </div>
 
